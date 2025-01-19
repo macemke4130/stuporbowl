@@ -1,0 +1,164 @@
+@font-face {
+  font-family: sb-bold;
+  src: url(./fonts/sb-bold.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: sb-light;
+  src: url(./fonts/sb-light.woff);
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sb-light, system-ui, sans-serif;
+  background: black;
+  font-size: 10px;
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  padding: 0 0.5rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sb-bold, system-ui, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+[aria-title="Hero Image"] {
+  display: grid;
+  color: black;
+  align-items: end;
+  justify-items: center;
+  text-align: center;
+}
+
+[aria-title="Hero Image"] > * {
+  grid-area: 1 / 1;
+}
+
+#hero-image {
+  width: 100vw;
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+#hero-text-container {
+  padding-bottom: 2vw;
+  z-index: 1;
+}
+
+#hero-text-shadow {
+  background: white;
+  width: 50%;
+  height: 12rem;
+  filter: blur(2rem);
+  opacity: 0.8;
+  margin-bottom: 2vw;
+}
+
+[aria-label="Event Poster"] {
+  position: relative;
+  margin: 0 auto;
+}
+
+#poster-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: black;
+}
+
+#event-poster {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  height: 20vh;
+}
+
+@media (min-width: 768px) {
+  #hero-text-shadow {
+    background: white;
+    width: 50rem;
+    height: 12rem;
+    filter: blur(2rem);
+    opacity: 0.8;
+    margin-bottom: 2vw;
+  }
+
+  [aria-label="Event Poster"] {
+    max-width: 70vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
