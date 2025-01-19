@@ -64,7 +64,7 @@ h2 {
   font-size: 2rem;
 }
 
-[aria-title="Hero Image"] {
+[aria-label="Hero Image"] {
   display: grid;
   color: black;
   align-items: end;
@@ -72,7 +72,7 @@ h2 {
   text-align: center;
 }
 
-[aria-title="Hero Image"] > * {
+[aria-label="Hero Image"] > * {
   grid-area: 1 / 1;
 }
 
