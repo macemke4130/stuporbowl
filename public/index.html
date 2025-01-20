@@ -10,22 +10,46 @@
   </head>
   <body>
     <section aria-label="Hero Image">
-      <picture>
-        <source srcset="./images/home-hero-2000.jpg" media="(min-width: 1440px)" width="2000" height="1125" />
-        <source srcset="./images/home-hero-1500.jpg" media="(min-width: 1200px)" width="1500" height="844" />
-        <source srcset="./images/home-hero-1000.jpg" media="(min-width: 768px)" width="1000" height="563" />
-        <img id="hero-image" src="./images/home-hero-500.jpg" width="500" height="282" alt="Racers waiting the snow for the race start." fetchpriority="high" />
-      </picture>
-      <div id="hero-text-shadow"></div>
+      <div id="hero-image">
+        <picture>
+          <source srcset="./images/home-hero-2000.jpg" media="(min-width: 1440px)" width="2000" height="1125" />
+          <source srcset="./images/home-hero-1500.jpg" media="(min-width: 1200px)" width="1500" height="844" />
+          <!-- <source srcset="./images/home-hero-1000.jpg" media="(min-width: 768px)" width="1000" height="563" /> -->
+          <img
+            id="hero-image"
+            src="./images/home-hero-1000.jpg"
+            width="1000"
+            height="563"
+            alt="Racers waiting the snow for the race start."
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+
       <div id="hero-text-container">
-        <h1>Stupor Bowl 26</h1>
-        <h2>Saturday, February 8th 2025</h2>
+        <div id="hero-text-shadow"></div>
+        <div id="hero-text-wrapper">
+          <h1>Stupor Bowl 26</h1>
+          <h2>Saturday, February 8th 2025</h2>
+        </div>
       </div>
     </section>
-    <p>
-      More details to follow. Until then, stay tuned to our <a href="https://www.instagram.com/stuporbowl26/" target="_blank">Instagram account</a> if you're
-      into being data mined.
-    </p>
+    <section aria-label="News">
+      <p>
+        More details to follow. Until then, if you're into being data mined, stay tuned to our
+        <a href="https://www.instagram.com/stuporbowl26/" target="_blank">Instagram account</a>.
+      </p>
+
+      <p>
+        This site is newly under construction. The goal is to have up to date information on this year's event as well as an archive of past years, interviews,
+        race sponsor content, photo galleries, race results and more.
+      </p>
+      <p>
+        If you would like to be involved in this website in any capacity, please email
+        <a href="mailto:stuporbowl.webmaster@gmail.com">stuporbowl.webmaster@gmail.com</a>
+      </p>
+      <p>See y'all at the starting line!</p>
+    </section>
     <section aria-label="Event Poster">
       <picture>
         <source srcset="./images/sb-2025-poster-d.jpeg" media="(min-width: 768px)" width="1152" height="1440" />
