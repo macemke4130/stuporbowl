@@ -72,6 +72,7 @@ h6,
 .h1,
 strong {
   font-family: sb-bold, system-ui, sans-serif;
+  font-weight: bold;
   margin: 0;
 }
 
