@@ -33,8 +33,18 @@ a {
 }
 
 p {
-  padding: 0 0.5rem;
-  text-wrap: balance;
+  margin-top: 0;
+}
+
+p a {
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: all;
+}
+
+ul,
+ol {
+  padding: 0 1.5rem;
 }
 
 button {
@@ -45,22 +55,46 @@ img {
   display: block;
 }
 
+.sr-only {
+  display: block;
+  white-space: nowrap;
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+strong {
   font-family: sb-bold, system-ui, sans-serif;
   margin: 0;
 }
 
-h1 {
+.h1 {
   font-size: 10vw;
+}
+
+.h1 h1 {
+  display: inline;
+  font-size: inherit;
 }
 
 h2 {
   font-size: 6vw;
+}
+
+.center {
+  text-align: center;
+}
+
+.map-link {
+  font-size: 1.8rem;
 }
 
 [aria-label="Hero Image"] {
@@ -69,11 +103,13 @@ h2 {
   color: black;
   place-items: center;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 #hero-image {
   width: 100vw;
   height: 100%;
+  max-height: 75vh;
   object-fit: cover;
   grid-row: 1 / -1;
   grid-column: 1 / -1;
@@ -110,7 +146,44 @@ h2 {
 
 [aria-label="News"] {
   margin: 0 auto;
+  padding: 0 0.5rem;
   max-width: 80ch;
+}
+
+article.box {
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+article.box.main-event {
+  background: linear-gradient(black, rgb(110, 0, 0) 30%, rgb(110, 0, 0) 70%, black);
+}
+
+article.box .article-type {
+  font-size: 2.3rem;
+  background: black;
+  padding: 0 0.5rem;
+  width: fit-content;
+  position: absolute;
+  top: -1.5rem;
+  right: 3rem;
+  text-align: right;
+}
+
+article.box.main-event .article-type {
+}
+
+article.box h2 {
+  font-size: clamp(1.4rem, 6vw, 6rem);
+  margin-bottom: 1rem;
+}
+
+article.box p,
+article.box li {
+  font-size: clamp(0.8rem, 4.5vw, 2.4rem);
 }
 
 [aria-label="Event Poster"] {
@@ -124,7 +197,7 @@ h2 {
   right: 0;
   padding: 0.5rem;
   font-size: 1.5rem;
-  background-color: black;
+  background: black;
 }
 
 #event-poster {
@@ -137,32 +210,54 @@ footer {
   height: 20vh;
 }
 
+@media (min-width: 576px) {
+  article.box .article-type {
+    top: -2rem;
+  }
+
+  article.box h2 {
+    font-size: 2.7rem;
+  }
+
+  article.box h3 {
+    font-size: 2rem;
+  }
+
+  article.box p,
+  article.box li {
+    font-size: 1.8rem;
+  }
+}
+
 @media (min-width: 768px) {
-  [aria-label="Event Poster"] {
-    max-width: 70vw;
+  [aria-label="News"] {
+    max-width: 80rem;
   }
 
-  h1 {
-    font-size: 4rem;
+  .h1 {
+    font-size: 5rem;
   }
 
-  h2 {
+  article.box {
+    padding: 2rem 2rem 0.5rem;
+  }
+
+  article.box h2 {
+    font-size: 3rem;
+  }
+
+  article.box h3 {
+    font-size: 2.25rem;
+  }
+
+  article.box p,
+  article.box li {
     font-size: 2rem;
   }
 }
 
-@media (min-width: 992px) {
-  h1 {
-    font-size: 5rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-}
-
 @media (min-width: 1200px) {
-  h1 {
+  .h1 {
     font-size: 6rem;
   }
 
