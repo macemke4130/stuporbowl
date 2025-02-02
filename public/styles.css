@@ -210,6 +210,12 @@ footer {
   height: 20vh;
 }
 
+@media (orientation: landscape) {
+  #hero-text-container {
+    grid-row: 6 / span 2;
+  }
+}
+
 @media (min-width: 576px) {
   article.box .article-type {
     top: -2rem;
