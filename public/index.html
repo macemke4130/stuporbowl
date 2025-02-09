@@ -15,62 +15,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Stupor Bowl MPLS. The second longest running alley cat race on the planet." />
     <meta name="keywords" content="StuporBowl, Stupor Bowl, Minneapolis Bike Race, Minneapolis Alley Cat Race" />
-    <link rel="preload" href="./images/home-hero-1000.jpg" as="image" media="(min-width: 1200px)" />
+    <link rel="preload" href="./images/lake-billy-9-16.webp" as="image" media="(min-width: 768px)" />
     <link rel="stylesheet" href="styles.css" />
     <title>Stupor Bowl | MPLS</title>
-
     <style>
-      #hero-text-container {
-    display: grid;
-    place-items: center;
-    height: 100%;
-      }
-
-#hero-text-container > * {
-  grid-area: 1 / 1;
-}
-    #hero-text-shadow {
-      background: white;
-      width: 100%;
-      height: 100%;
-      filter: blur(1rem);
-      opacity: 0.8;
-    }
-    
-    #hero-text-wrapper {
-      padding: 0 2rem;
-      z-index: 1;
-      line-height: 1.15;
-    }
+      
     </style>
   </head>
 
   <body>
     <section aria-label="Hero Image">
-      <div id="hero-image">
+      <div id="hero-image-container">
         <picture>
-          <source srcset="./images/home-hero-2000.jpg" media="(min-width: 1440px)" width="2000" height="1125" />
-          <source srcset="./images/home-hero-1500.jpg" media="(min-width: 1200px)" width="1500" height="844" />
+          <source srcset="./images/lake-billy-16-9.webp" media="(min-width: 768px)" width="2342" height="1317" />
           <img
             id="hero-image"
-            src="./images/home-hero-1000.jpg"
-            width="1000"
-            height="563"
-            alt="Racers waiting the snow for the race start."
+            src="./images/lake-billy-9-16.webp"
+            width="450"
+            height="800"
+            alt="A racer riding across Lake Bde Maka Ska during Stupor Bowl."
             fetchpriority="high"
           />
         </picture>
       </div>
-
       <div id="hero-text-container">
         <div id="hero-text-shadow"></div>
         <div id="hero-text-wrapper">
           <div class="h1">
-            <h1>Stupor Bowl</h1>
-            26
+            <h1>
+              <svg width="600" height="100">
+              <text x="0" y="75%" stroke="#fff" stroke-width="3" fill="rgba(0,0,0,0.8)" paint-order="stroke">Stupor Bowl</text>
+            </svg>
+          </h1>
           </div>
           <div>
-          <time datetime="2025-02-08">Saturday, February 8th 2025</time><br/ >Minneapolis, Minnesota</div>
         </div>
       </div>
     </section>
