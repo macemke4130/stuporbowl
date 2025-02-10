@@ -4,6 +4,19 @@ import path from "path";
 const __dirname = path.resolve();
 const app = express();
 
+// Secure redirect for produciton.
+app.get("*", (req, res, next) => {
+  if (req.headers.host.includes("localhost")) {
+    next();
+  } else {
+    if (req.headers["x-forwarded-proto"] !== "https") {
+      res.redirect(301, `https://www.stuporbowl.org${req.url}`);
+    } else {
+      next();
+    }
+  }
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
