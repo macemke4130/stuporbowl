@@ -1,12 +1,18 @@
 @font-face {
+  font-family: snow-caps;
+  src: url(./fonts/snowtop-caps.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: sb-bold;
-  src: url(./fonts/sb-bold.woff);
+  src: url(./fonts/sb-bold.woff) format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: sb-light;
-  src: url(./fonts/sb-light.woff);
+  src: url(./fonts/sb-light.woff) format("woff");
   font-display: swap;
 }
 
@@ -14,6 +20,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+::selection {
+  background-color: #fff;
+  color: #000;
+}
+
+img::selection {
+  background-color: #000b;
 }
 
 html {
@@ -41,11 +56,6 @@ p a {
   text-decoration-skip-ink: all;
 }
 
-ul,
-ol {
-  padding: 0 1.5rem;
-}
-
 button {
   font-family: inherit;
 }
@@ -69,39 +79,38 @@ h3,
 h4,
 h5,
 h6,
-.h1,
-strong {
+.h1 {
   font-family: sb-bold, system-ui, sans-serif;
-  font-weight: bold;
   font-size: inherit;
+  line-height: 1;
   margin: 0;
 }
 
-.h1 {
-  font-size: clamp(3.5rem, 6vw, 7rem);
+.snow {
+  font-family: snow-caps;
+  color: #000;
+  font-weight: normal;
 }
 
-h2 {
-  font-size: 6vw;
-}
-
-.center {
+.site-title {
+  font-size: 27vw;
   text-align: center;
 }
 
-.map-link {
-  font-size: 1.8rem;
+.site-title + h2 {
+  color: #000;
+  text-align: center;
+  font-size: 8vw;
 }
 
 [aria-label="Hero Image"] {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: 90dvh;
+  width: 100vw;
+  height: 90svh;
   margin-bottom: 4rem;
-}
-
-[aria-label="Hero Image"] > * {
+  background: linear-gradient(#e1e1e1, #acacac);
 }
 
 #hero-image-container {
@@ -116,18 +125,14 @@ h2 {
 }
 
 #hero-text-container {
-  grid-row: 8 / span all;
-  grid-column: 2 / span all;
-}
-
-#hero-text-container svg text {
-  font-size: inherit;
+  grid-row: 2 / span 4;
+  grid-column: 1 / -1;
 }
 
 [aria-label="News"] {
   margin: 0 auto;
   padding: 0 0.5rem;
-  max-width: 80ch;
+  max-width: 60ch;
 }
 
 article.box {
@@ -136,114 +141,42 @@ article.box {
   padding: 2rem 1rem 0.5rem 1rem;
   position: relative;
   margin-bottom: 5rem;
-}
 
-article.box.main-event {
-  background: linear-gradient(black, rgb(110, 0, 0) 30%, rgb(110, 0, 0) 70%, black);
-}
+  .article-type {
+    font-size: 2.3rem;
+    background: black;
+    padding: 0 0.5rem;
+    width: fit-content;
+    position: absolute;
+    top: -1.5rem;
+    right: 3rem;
+    text-align: right;
+  }
 
-article.box .article-type {
-  font-size: 2.3rem;
-  background: black;
-  padding: 0 0.5rem;
-  width: fit-content;
-  position: absolute;
-  top: -1.5rem;
-  right: 3rem;
-  text-align: right;
-}
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
 
-article.box.main-event .article-type {
-}
-
-article.box h2 {
-  font-size: clamp(1.4rem, 6vw, 6rem);
-  margin-bottom: 1rem;
-}
-
-article.box p,
-article.box li {
-  font-size: clamp(0.8rem, 4.5vw, 2.4rem);
-}
-
-[aria-label="Event Poster"] {
-  position: relative;
-  margin: 0 auto;
-}
-
-#poster-credit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  background: black;
-}
-
-#event-poster {
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
+  p {
+    font-size: 1.8rem;
+  }
 }
 
 footer {
   height: 20vh;
 }
 
-@media (min-width: 576px) {
-  article.box .article-type {
-    top: -2rem;
+@media (min-width: 556px) {
+  .hide-on-desktop {
+    display: none;
   }
 
-  article.box h2 {
-    font-size: 2.7rem;
+  .site-title {
+    font-size: 15vw;
   }
 
-  article.box h3 {
-    font-size: 2rem;
-  }
-
-  article.box p,
-  article.box li {
-    font-size: 1.8rem;
-  }
-}
-
-@media (min-width: 768px) {
-  [aria-label="News"] {
-    max-width: 80rem;
-  }
-
-  article.box {
-    padding: 2rem 2rem 0.5rem;
-  }
-
-  article.box h2 {
-    font-size: 3rem;
-  }
-
-  article.box h3 {
-    font-size: 2.25rem;
-  }
-
-  article.box p,
-  article.box li {
-    font-size: 2rem;
-  }
-
-  #hero-image {
-    object-position: 65%;
-  }
-
-  #hero-text-container {
-    grid-row: 9 / -1;
-    grid-column: 2 / -1;
-  }
-}
-
-@media (min-width: 1200px) {
-  #hero-text-container {
-    grid-column: 3 / -1;
-    grid-row: 10 / -1;
+  .site-title + h2 {
+    font-size: clamp(4rem, 3vw, 10rem);
   }
 }
