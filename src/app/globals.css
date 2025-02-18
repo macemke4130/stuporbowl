@@ -1,0 +1,59 @@
+:root {
+  --site-background-color: #111;
+  --site-text-color: #ddd;
+}
+
+@layer reset, defaults, layout, components, utilities, overrides;
+
+@layer reset {
+  :where(*, *::before, *::after) {
+    box-sizing: border-box;
+  }
+
+  :where(a) {
+    color: inherit;
+  }
+
+  :where(img, iframe, button) {
+    display: block;
+  }
+
+  :where(button) {
+    font-family: inherit;
+  }
+}
+
+@layer defaults {
+  html {
+    font-size: 10px;
+    background-color: var(--site-background-color);
+  }
+
+  body {
+    font-size: 1.6rem;
+    color: var(--site-text-color);
+    margin: 0;
+    width: 100vh;
+    overflow-x: hidden;
+  }
+
+  :where(ul[class]) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer utilities {
+  .flex {
+    display: flex;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+}
