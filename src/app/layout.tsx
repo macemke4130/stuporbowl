@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 // Components
-import Header from "./_components/Header";
+import Header from "./_components/header/Header";
 import Footer from "./_components/Footer";
 
 // To do: Add OG metadata - LM
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const htmlAttributes: { [key: string]: string } = {};
 
   if (process.env.NEXT_PUBLIC_ENVIRONMENT === "dev") {
-    htmlAttributes["data-google-analytics-opt-out"] = ""
+    htmlAttributes["data-google-analytics-opt-out"] = "";
   }
 
   return (
