@@ -2,4 +2,16 @@
   background-color: #666;
   height: 10rem;
   align-content: center;
+
+  nav {
+    display: flex;
+    gap: 2rem;
+    max-width: 96rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media (min-width: 992px) {
+      padding: 0;
+    }
+  }
 }

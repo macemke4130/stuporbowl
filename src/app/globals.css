@@ -1,6 +1,7 @@
 :root {
   --site-background-color: #111;
   --site-text-color: #ddd;
+  --site-max-width: 99.2rem;
 }
 
 @layer reset, defaults, layout, components, utilities, overrides;
@@ -42,6 +43,17 @@
     padding: 0;
     list-style: none;
   }
+
+  :where(main > article) {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+
+  :where(main > article p) {
+    text-align: justify;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
 }
 
 @layer utilities {
@@ -56,4 +68,30 @@
   .align-items-center {
     align-items: center;
   }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .mr-auto {
+    margin-right: auto;
+  }
+}
+
+/* Media Breakpoints. Mobile first. */
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  /* This is maximum content width */
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
 }
