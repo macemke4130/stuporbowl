@@ -19,8 +19,27 @@
     display: block;
   }
 
+  :where(img) {
+    max-width: 100%;
+    height: auto;
+  }
+
   :where(button) {
     font-family: inherit;
+    min-height: 2.4rem;
+    min-width: 2.4rem;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    font-size: inherit;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6):has(+ :where(p)) {
+    margin-bottom: 0;
+  }
+
+  :where(p) {
+    margin-top: 0;
   }
 }
 
@@ -31,7 +50,7 @@
   }
 
   body {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--site-text-color);
     margin: 0;
     width: 100vw;
@@ -46,11 +65,12 @@
 
   :where(main > article) {
     margin: 0 auto;
-    max-width: 60ch;
+    max-width: 58rem;
   }
 
   :where(main > article p) {
     text-align: justify;
+    font-size: 2.2rem;
     line-height: 1.25;
     text-wrap: balance;
   }
@@ -75,6 +95,17 @@
 
   .mr-auto {
     margin-right: auto;
+  }
+}
+
+@layer overrides {
+  .sr-only {
+    display: block;
+    width: 0;
+    height: 0;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
   }
 }
 
