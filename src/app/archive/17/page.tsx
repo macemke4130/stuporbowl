@@ -1,6 +1,11 @@
-import ImageAsset from "../../_components/imageAsset/ImageAsset";
+// Styles
 import s from "./page.module.css";
-import Image from 'next/image';
+
+// Components
+import ImageAsset from "../../_components/imageAsset/ImageAsset";
+
+// Assets
+import patch from "./images/stupor-17-patch.jpg"
 
 export default function SB17() {
     return (
@@ -8,7 +13,7 @@ export default function SB17() {
             <h1>Stupor Bowl 17</h1>
             <article>
                 <ImageAsset
-                    src="/images/stupor-17-patch.jpg"
+                    src={patch}
                     width={3072}
                     height={4080}
                     alt="Torn piece of clothing with two patches sewn on."

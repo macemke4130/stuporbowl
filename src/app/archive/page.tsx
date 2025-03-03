@@ -3,7 +3,7 @@ import ArchiveListItem from "../_components/archiveListItem/ArchiveListItem";
 
 export default function Archive() {
     const mostRecentEvent = 26;
-    const allPastEvents = Array.from({ length: mostRecentEvent }, (noop, index) => index);
+    const allPastEvents = Array.from({ length: mostRecentEvent }, (_, index) => index);
 
     return (
         <>

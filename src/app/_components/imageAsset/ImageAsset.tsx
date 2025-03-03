@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import s from "./ImageAsset.module.css";
 
 type CreditObject = {
@@ -7,7 +7,8 @@ type CreditObject = {
 }
 
 type ImageAssetProps = {
-    src: string;
+    // src: string;
+    src: StaticImageData;
     width: number;
     height: number;
     alt: string;
@@ -26,7 +27,9 @@ export default function ImageAsset(props: ImageAssetProps) {
                     width={props.width}
                     height={props.height}
                     alt={props.alt}
-                    loading={props.loading || "lazy"} />
+                    loading={props.loading || "lazy"}
+                    placeholder="blur"
+                    sizes="(min-width: 576px) 100vw, (min-width: 768px) 50vw, 100vw" />
                 <div className={s.credit}>
                     {!props.credit ?
                         // To Do: Instead of a mailto, this should be a 
