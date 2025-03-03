@@ -24,6 +24,11 @@
     height: auto;
   }
 
+  :where(figure) {
+    margin: 0;
+    padding: 0;
+  }
+
   :where(button) {
     font-family: inherit;
     min-height: 2.4rem;
@@ -46,6 +51,7 @@
 @layer defaults {
   html {
     font-size: 10px;
+    font-family: system-ui, sans-serif;
     background-color: var(--site-background-color);
   }
 

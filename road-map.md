@@ -30,6 +30,12 @@
 
 ## Roadmap
 
+- Fast Facts component for top of archive year page
+  - Date of race
+  - Weather conditions
+  - Number of racers
+  - Number of finishers
+  - Number of stops
 - Code of conduct page.
 - CMS for last minute updates and announcements.
   - Schedule of events dissapears after event

@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer>Here's the footer</footer>
+        <footer style={{ paddingBottom: "10vh" }}></footer>
     )
 }
 
