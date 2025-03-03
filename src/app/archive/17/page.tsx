@@ -14,7 +14,7 @@ export default function SB17() {
                     alt="Torn piece of clothing with two patches sewn on."
                     credit={{ owner: "Anthony Ross" }}
                 >
-                    <figcaption>Scrap saved from a battle vest of the owner. Genuine patch from Stupor Bowl 17. Also pictured is a patch from the now defunt <i>First Avenue Cycling Club</i> of Minneapolis.</figcaption>
+                    <figcaption>Scrap saved from a battle vest of the owner. Genuine patch from Stupor Bowl 17. Also pictured is a patch from the now defunct <i>First Avenue Cycling Club</i> of Minneapolis.</figcaption>
                 </ImageAsset >
             </article>
         </>
