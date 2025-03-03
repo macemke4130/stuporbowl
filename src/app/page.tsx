@@ -1,4 +1,3 @@
-import ImageAsset from "./_components/imageAsset/ImageAsset";
 import s from "./page.module.css";
 import Image from 'next/image';
 

@@ -6,8 +6,6 @@ export default function SB17() {
     return (
         <>
             <h1>Stupor Bowl 17</h1>
-            <Image src="/images/lake-billy-16-9.webp" width={2342} height={1317} loading="eager" fetchPriority="high" alt="A bicycle racer on a frozen lake." className={s.hero} />
-
             <article>
                 <ImageAsset
                     src="/images/stupor-17-patch.jpg"

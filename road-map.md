@@ -36,6 +36,8 @@
   - Number of racers
   - Number of finishers
   - Number of stops
+  - Names of organizers
+- Submit Corrections component for each archive page - Maybe this just lives in the footer?
 - Code of conduct page.
 - CMS for last minute updates and announcements.
   - Schedule of events dissapears after event
