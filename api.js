@@ -80,4 +80,53 @@ router.get(`${apiRoute}/users/`, async (req, res) => {
   }
 });
 
+router.get(`${apiRoute}/2026/racers`, async (req, res) => {
+  try {
+    const sql = await query(`SELECT * FROM year2026;`);
+
+    const response = {
+      message: "All registered racers for year 2026.",
+      status: 200,
+      data: sql,
+    };
+
+    res.json(response);
+  } catch (e) {
+    const response = {
+      message: e.sqlMessage,
+      status: e.errno,
+      data: null,
+    };
+
+    res.json(response);
+    console.log(e);
+  }
+});
+
+router.post(`${apiRoute}/2026/register-racer`, async (req, res) => {
+  const data = prepData(req.body);
+  console.log(data);
+
+  try {
+    const sql = await query(`INSERT INTO year2026 (${data.columns}) VALUES (${data.marks})`, data.values);
+
+    const response = {
+      message: "Successfully registerd racer.",
+      status: 200,
+      data: sql,
+    };
+
+    res.json(response);
+  } catch (e) {
+    const response = {
+      message: e.sqlMessage,
+      status: e.errno,
+      data: null,
+    };
+
+    res.json(response);
+    console.log(e);
+  }
+});
+
 export default router;
