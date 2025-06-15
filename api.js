@@ -12,7 +12,6 @@ const router = express.Router();
 
 // Secure redirect for produciton.
 router.get("*", (req, res, next) => {
-  console.log(req.headers.host);
   if (req.headers.host.includes("localhost") || req.headers.host.includes("192")) {
     next();
   } else {
@@ -32,6 +31,53 @@ router.get(`${apiRoute}/greet/`, async (req, res) => {
   };
 
   res.json(response);
+});
+
+router.post(`${apiRoute}/admin/jwt`, async (req, res) => {
+  const tokenFromFrontEnd = req.body.token;
+
+  let response = {};
+
+  const auth = await jsonwebtoken.default.verify(tokenFromFrontEnd, privateKey, function (err, decoded) {
+    if (err) {
+      response = {
+        message: "Invalid JWT",
+        status: 401,
+        data: { valid: false },
+      };
+    } else {
+      response = {
+        message: "Valid JWT",
+        status: 200,
+        data: { valid: true },
+      };
+    }
+
+    res.json(response);
+  });
+});
+
+router.get(`${apiRoute}/users/`, async (req, res) => {
+  try {
+    const sql = await query(`SELECT * FROM users;`);
+
+    const response = {
+      message: "All Users.",
+      status: 200,
+      data: sql,
+    };
+
+    res.json(response);
+  } catch (e) {
+    const response = {
+      message: e.sqlMessage,
+      status: e.errno,
+      data: null,
+    };
+
+    res.json(response);
+    console.log(e);
+  }
 });
 
 export default router;

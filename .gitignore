@@ -12,3 +12,4 @@
 .env*
 /config/*
 dbDonnect.js
+*.sql
