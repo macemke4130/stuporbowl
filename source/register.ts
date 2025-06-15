@@ -12,9 +12,19 @@ type Racer = {
   finishTime?: string;
 };
 
+const successSwitch = (racerId: number) => {
+  formElement.remove();
+  $(`#thank-you`)!.classList.remove("hide");
+  $(`#racer-id`)!.textContent = racerId + "";
+};
+
 const registerRacer = async (formData: Racer) => {
   const registerResponse = await api("2026/register-racer", "POST", formData);
+
   console.log(registerResponse);
+  if (registerResponse.status === 200) {
+    successSwitch(registerResponse.data.insertId);
+  }
 };
 
 const formElement = $(`form`)! as HTMLFormElement;

@@ -105,7 +105,6 @@ router.get(`${apiRoute}/2026/racers`, async (req, res) => {
 
 router.post(`${apiRoute}/2026/register-racer`, async (req, res) => {
   const data = prepData(req.body);
-  console.log(data);
 
   try {
     const sql = await query(`INSERT INTO year2026 (${data.columns}) VALUES (${data.marks})`, data.values);
