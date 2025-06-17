@@ -1,7 +1,10 @@
 const environmentHost = "http://localhost:3004";
 
-const $ = (selector: string) => document.querySelector(selector);
-const $$ = (selector: string) => document.querySelectorAll(selector);
+const $ = (selector: string) => document.querySelector(selector) as HTMLElement;
+const $$ = (selector: string) => document.querySelectorAll(selector) as NodeListOf<HTMLElement>;
+const dom = (element: string) => document.createElement(element);
+
+const oneRem = Number(getComputedStyle(document.documentElement).fontSize.split("px")[0]);
 
 const api: (uri: string, method: "GET" | "POST", body: any) => any = async (uri: string, method: "GET" | "POST", body: any) => {
   try {
