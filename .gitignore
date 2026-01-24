@@ -7,6 +7,5 @@
 
 # secrets
 .env*
-/config/*
 dbDonnect.js
 *.sql
