@@ -123,6 +123,9 @@ const handleLocalRadioSelect = (event: Event) => {
   }
 };
 
+const registerButton = $(`#register`)! as HTMLButtonElement;
+registerButton.addEventListener("click", handleRegisterClick);
+
 allInputs.forEach((input) => {
   input.addEventListener("input", handleInputChange);
 
@@ -130,6 +133,3 @@ allInputs.forEach((input) => {
     input.addEventListener("input", handleLocalRadioSelect);
   }
 });
-
-const registerButton = $(`#register`)! as HTMLButtonElement;
-registerButton.addEventListener("click", handleRegisterClick);

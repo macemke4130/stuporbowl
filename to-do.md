@@ -6,3 +6,4 @@
   - Loading animation for fetch.
   - Create random question for capcha.
     - If answer doesn't match on backend, throw error to front.
+  - Rookie field

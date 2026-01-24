@@ -1,0 +1,28 @@
+sb-hero {
+  display: grid;
+  align-items: end;
+
+  & > * {
+    grid-area: 1 / -1;
+  }
+
+  .fade {
+    height: 75%;
+    background: linear-gradient(0deg, var(--site-background-color), transparent);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 10 / 3;
+    object-fit: cover;
+    object-position: 0 60%;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 6rem;
+    -webkit-text-stroke: 3px black;
+    paint-order: stroke;
+    margin-block-end: var(--standard-spacing);
+  }
+}

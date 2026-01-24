@@ -1,0 +1,85 @@
+#form-columns {
+  padding-inline: 2rem;
+  margin-block: calc(0.5 * var(--standard-spacing));
+  margin-inline: auto;
+
+  #text-wrapper {
+    position: sticky;
+    top: 1rem;
+  }
+
+  @media (min-width: 992px) {
+    margin-block: var(--standard-spacing);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+form {
+  .not-valid {
+    outline: 2px solid red;
+    outline-offset: 3px;
+  }
+
+  label {
+    display: block;
+    margin-block-end: calc(0.5 * var(--standard-spacing));
+
+    & > * {
+      display: block;
+    }
+
+    input,
+    select,
+    option {
+      font-size: 2rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    input[type="date"] {
+      padding: 0.5rem;
+    }
+  }
+
+  fieldset {
+    margin-block-end: calc(0.5 * var(--standard-spacing));
+
+    label {
+      margin-block-end: 1rem;
+    }
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 5rem;
+
+    label {
+      display: flex;
+      margin-block-end: 1rem;
+    }
+  }
+}
+
+#thank-you {
+  margin-block-start: var(--standard-spacing);
+  text-align: center;
+
+  h2 {
+    font-size: 3.5rem;
+    margin-block-end: 1rem;
+  }
+
+  #racer {
+    #racer-id {
+      display: block;
+      font-size: 5rem;
+    }
+  }
+}
