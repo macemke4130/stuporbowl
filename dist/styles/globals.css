@@ -11,12 +11,14 @@
 @font-face {
   font-family: sb;
   font-weight: normal;
+  font-display: swap;
   src: url("../fonts/sb-light.woff") format("woff");
 }
 
 @font-face {
   font-family: sb;
   font-weight: bold;
+  font-display: swap;
   src: url("../fonts/sb-bold.woff") format("woff");
 }
 

@@ -27,7 +27,10 @@
   <body>
     <main>
       <section aria-label="Hero" class="hero">
-        <img src="./images/lake-billy-16-9.webp" alt="" />
+        <picture>
+          <source media="(min-width: 500px)" srcset="./images/lake-billy-16-9-d.webp" width="2342" height="1317" />
+          <img src="./images/lake-billy-16-9-m.webp" alt="" width="450" height="253" fetchpriority="high" />
+        </picture>
         <div class="hero-text">
           <h1>Stupor Bowl 27</h1>
           <h2>February 7th, 2026</h2>
