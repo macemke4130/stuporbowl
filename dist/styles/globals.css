@@ -1,6 +1,8 @@
 :root {
   --site-background-color: #111;
   --site-text-color: #ddd;
+  --site-accent-color: rgb(192, 0, 0);
+
   --site-max-width: 99.2rem;
   --standard-spacing: 6rem;
   --round: 0.5rem;
@@ -65,10 +67,21 @@
 }
 
 @layer defaults {
+  ::selection {
+    color: var(--site-background-color);
+    background-color: var(--site-text-color);
+  }
+
+  *:focus-visible {
+    outline: 5px dotted var(--site-accent-color);
+    outline-offset: 8px;
+  }
+
   html {
     font-size: 10px;
     font-family: sb, system-ui, sans-serif;
     background-color: var(--site-background-color);
+    overscroll-behavior: none;
   }
 
   body {
