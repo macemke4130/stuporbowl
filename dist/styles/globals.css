@@ -84,7 +84,6 @@
     font-size: 10px;
     font-family: sb, system-ui, sans-serif;
     background-color: var(--site-background-color);
-    overscroll-behavior: none;
   }
 
   body {
