@@ -42,6 +42,10 @@
     margin-inline: auto;
   }
 
+  #race-information {
+    margin-block-start: 1rem;
+  }
+
   table {
     margin-block-start: 1.5rem;
     margin-inline: auto;
