@@ -70,9 +70,9 @@
 :where(#news-section, #volunteer-section, #this-year-race-info-section) {
   padding: 0 0.5rem;
   max-width: 60ch;
+}
 
 :where(#news-section) {
-
   article.box {
     border: 1px solid white;
     border-radius: 1rem;
