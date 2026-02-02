@@ -32,10 +32,46 @@
   }
 }
 
-:where(#news-section) {
+:where(section[id]:has(> h2)) {
+  max-inline-size: 80rem;
   margin-inline: auto;
+}
+
+:where(#this-year-race-info-section) {
+  .main-flyer {
+    margin-inline: auto;
+  }
+
+  table {
+    margin-block-start: 1.5rem;
+    margin-inline: auto;
+    max-width: 80rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    inline-size: 100%;
+
+    :where(th, td) {
+      padding-block: 0.5rem;
+      padding-inline: 1rem;
+      border: 1px solid #fff5;
+    }
+
+    caption {
+      font-weight: bold;
+    }
+
+    th {
+      inline-size: 12rem;
+      text-align: end;
+    }
+  }
+}
+
+:where(#news-section, #volunteer-section, #this-year-race-info-section) {
   padding: 0 0.5rem;
   max-width: 60ch;
+
+:where(#news-section) {
 
   article.box {
     border: 1px solid white;
