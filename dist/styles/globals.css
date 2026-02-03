@@ -175,6 +175,13 @@
   :where(footer) {
     height: 20rem;
   }
+
+  :where(a) {
+    /* Fallback for color-mix() */
+    text-decoration-color: #fff5;
+    text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+    text-underline-offset: 2px;
+  }
 }
 
 @layer components {
@@ -205,17 +212,25 @@
     margin-inline: auto;
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      column-gap: 2rem;
-      row-gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 0.5rem;
+      place-items: center;
       list-style: none;
-      padding-inline: 1rem;
+
+      @media (min-width: 575px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
       li {
-        white-space: nowrap;
         font-size: 1.75rem;
+        text-align: center;
+
+        a {
+          padding-block: 0.5rem;
+          line-height: 1.25;
+          display: block;
+        }
       }
     }
   }
